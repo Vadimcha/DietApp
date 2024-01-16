@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/CategorySection.dart';
 import '../components/SearchBar.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,9 +10,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: const Column(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MySearchBar(),
+          const MySearchBar(),
+          const SizedBox(
+            height: 40,
+          ),
+          CategorySection(),
         ],
       ),
       backgroundColor: Colors.white,
