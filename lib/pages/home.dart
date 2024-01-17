@@ -1,3 +1,4 @@
+import 'package:diet_app/components/DietSection.dart';
 import 'package:flutter/material.dart';
 
 import '../components/CategorySection.dart';
@@ -10,14 +11,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
         children: [
           const MySearchBar(),
-          const SizedBox(
-            height: 40,
-          ),
+          const SizedBox(height: 40),
           CategorySection(),
+          const SizedBox(height: 40),
+          DietSection(),
         ],
       ),
       backgroundColor: Colors.white,
